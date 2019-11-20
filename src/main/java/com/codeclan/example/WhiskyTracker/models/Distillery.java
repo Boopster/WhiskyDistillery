@@ -23,7 +23,7 @@ public class Distillery {
 
     public Distillery(String name, String region) {
         this.name = name;
-        this.region = region;
+        this.region = region.toLowerCase();
         this.whiskies = new ArrayList<>();
     }
 
@@ -51,7 +51,7 @@ public class Distillery {
     }
 
     public void setRegion(String region) {
-        this.region = region;
+        this.region = region.toLowerCase();
     }
 
     public List<Whisky> getWhiskies() {
