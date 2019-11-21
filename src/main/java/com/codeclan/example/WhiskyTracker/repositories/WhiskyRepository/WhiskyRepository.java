@@ -7,10 +7,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface WhiskyRepository extends JpaRepository<Whisky, Long>, WhiskyRepositoryCustom {
+
     List<Whisky> findWhiskiesByYear(int year);
 
     List<Whisky> findWhiskiesByDistillery(Distillery distillery);
 
     List<Whisky> findWhiskiesByDistilleryAndAge(Distillery distillery, int age);
+
+    List<Whisky> findWhiskiesByRegion(String region);
 
 }
